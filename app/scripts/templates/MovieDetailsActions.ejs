@@ -1,0 +1,19 @@
+<% if (data.inFavourites) { %>
+
+    <% if (data.watched) { %>
+    
+        <a id="watched" class="btn btn-primary" href="javascript:void(0)"><i class="icon-remove icon-white"></i> Mark as Unwatched</a>
+        
+    <% } else { %>
+    
+        <a id="watched" class="btn btn-primary" href="javascript:void(0)"><i class="icon-ok icon-white"></i> Mark as Watched</a>
+        
+    <% } %>
+    
+    <a id="remove" class="btn btn-danger" href="javascript:void(0)"><i class="icon-remove icon-white"></i> Remove from Favourites</a>
+    
+<% } else { %>
+
+    <a id="add" class="btn btn-success" href="javascript:void(0)"><i class="icon-ok icon-white"></i> Add to Favourites</a>
+    
+<% } %>

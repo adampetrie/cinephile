@@ -1,0 +1,19 @@
+<div class="row-fluid">
+    
+    <img class="img-polaroid span3" src="<%= tmdbBaseUrl + tmdbPosterSizes[2] + data.poster_path %>" />
+    
+    <div class="movie-details span9">
+        <h3><%= data.title %> (<%= data.release_date %>)</h3>
+        <p>Genres:
+            <% _.each(data.genres, function(genre) { %>
+                <%= genre.name %>,   
+            <% });%>
+        </p>
+        <p><%= data.overview %></p>
+        <p id="actions"></p>
+        <p><a class="btn btn-warning" href="http://www.imdb.com/title/<%= data.imdb_id %>" target="_blank"><i class="icon-film icon-white"></i> View on IMDB</a></p>
+    </div>
+</div>
+
+<h4>You might also enjoy:</h4>
+<ul id="similar-titles" class="thumbnails"></ul>
