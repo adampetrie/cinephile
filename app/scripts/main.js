@@ -36,14 +36,15 @@ $(document).ready(function(){
         {
             tmdbBaseUrl = data.images.base_url;
             tmdbPosterSizes = data.images.poster_sizes;
-            
-            console.log(tmdbPosterSizes);
-            
-            cinephile.init();
         },
-        error: function(event)
+        error: function()
         {
-            console.log(event);
+            $('#header').after($('#no-connection').html());
+        },
+        complete: function()
+        {
+            //Start the app
+            cinephile.init();
         }
     });
 });

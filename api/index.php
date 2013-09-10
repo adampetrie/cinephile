@@ -27,10 +27,6 @@
             
             $result = $tmdb->getSimilarMovies($_GET['movieId']);
             break;
-        
-        default:
-            
-            $result = 'error!!';
     }
     
     echo json_encode($result);
