@@ -12,6 +12,8 @@ window.cinephile = {
     Routers: {},
     init: function()
     {
+        //Initialize the favourites collection and pull any favourites out of
+        //localStorage
         this.favouriteMovies = new this.Collections.MovieCollection({
             model: this.Models.MovieDetailsModel
         });
@@ -28,6 +30,9 @@ window.cinephile = {
 
 $(document).ready(function(){
 
+    //TMDb API requires a call to configuration in order to get the data required
+    //for image urls. We make this call once on page load and make the necessary
+    //values globally available.
     $.ajax({
         type: 'get',
         url: '/cinephile/api/index.php?action=configuration',

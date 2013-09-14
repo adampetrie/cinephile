@@ -35,7 +35,7 @@ cinephile.Views.MovieView = Backbone.View.extend({
         }
         
         templateVariables.id = this.model.get('id');
-        templateVariables.poster_path = this.model.get('poster_path');
+        templateVariables.posterPath = this.model.get('poster_path');
         
         return templateVariables;
     }

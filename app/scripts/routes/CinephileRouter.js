@@ -26,6 +26,7 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
     {
         console.log('Home Route');
         
+        //Because homeView is static, there's no need to re-initialize it 
         if ( ! this.homeView)
         {
             this.homeView = new cinephile.Views.HomeView();
@@ -50,6 +51,8 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
         
         var movieInCollection = cinephile.favouriteMovies.get(id);
         
+        //If the selected ID is in the favourites collection, we already have all the data
+        //we need to render its details properly.
         if(typeof movieInCollection !== 'undefined')
         {
             var view = new cinephile.Views.MovieDetailsView({
@@ -59,6 +62,7 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
             
             $('#content').html(view.el);
         }
+        //ID's not in favourites are requested from the server before being rendered
         else
         {
             var movieDetails = new cinephile.Models.MovieDetailsModel({ id: id });

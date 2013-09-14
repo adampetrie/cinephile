@@ -12,7 +12,7 @@ cinephile.Views.MovieSearchView = Backbone.View.extend({
     
     events :
     {
-        'click a' : 'clickHandler'
+        'click a' : 'addToFavourites'
     },
 
     initialize: function()
@@ -26,7 +26,7 @@ cinephile.Views.MovieSearchView = Backbone.View.extend({
         return this;
     },
     
-    clickHandler: function()
+    addToFavourites: function()
     {
         $('.dropdown').removeClass('open');
         

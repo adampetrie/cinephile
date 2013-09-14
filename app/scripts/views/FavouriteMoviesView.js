@@ -16,7 +16,7 @@ cinephile.Views.FavouriteMoviesView = Backbone.View.extend({
         this.collection.fetch();
         this.listenTo(this.collection, 'add', this.addMovie);
         
-        //_.bindAll(this, 'setFilter');
+        //Stores 'watched', 'unwatched' values for filtering favourites list
         this.activeFilter = '';
         
         this.render();
@@ -44,6 +44,7 @@ cinephile.Views.FavouriteMoviesView = Backbone.View.extend({
         
         var filteredMovies;
         
+        //Uses the activeFilter value to select only films that match filter criteria
         switch (this.activeFilter)
         {
         case 'watched':
@@ -72,6 +73,8 @@ cinephile.Views.FavouriteMoviesView = Backbone.View.extend({
     
     addMovie: function(movie)
     {
+        //If this is the first movie added to favourites we re-render the screen to remove the
+        //empty favourites message
         if(this.collection.length === 1)
         {
             this.render();
@@ -85,6 +88,7 @@ cinephile.Views.FavouriteMoviesView = Backbone.View.extend({
     
     setFilter: function()
     {
+        //Changing the filter values causes the display to update automatically
         this.activeFilter = $('#filter').val();
         this.renderFavourites();
     }

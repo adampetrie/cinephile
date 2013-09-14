@@ -8,6 +8,9 @@ cinephile.Views.MovieDetailsView = Backbone.View.extend({
     
     initialize: function()
     {
+        //Each details view gets an actions view so that as a film is added/remove from favourites
+        //or marked as watched we can re-render only the appropriate actions instead of the entire
+        //view.
         this.actionsView = new cinephile.Views.MovieDetailsActionsView({
             model: this.model,
             inFavourites: this.options.inFavourites
@@ -17,8 +20,6 @@ cinephile.Views.MovieDetailsView = Backbone.View.extend({
     
     render: function()
     {
-        console.log(this.actionsView);
-        
         this.$el.html(this.template(this.model.attributes));
         this.$('#actions').html(this.actionsView.el);
         this.getSimilarTitles();
