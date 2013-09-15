@@ -27,6 +27,7 @@
                 });
                 
                 it('will populate itself with movie information from TMDb based on an ID', function () {
+                    expect(this.movieDetailsModel.url()).toBe('/cinephile/api/index.php?action=getMovieDetails&movieId=' + this.movieDetailsModel.id)
                     expect(this.movieDetailsModel.get('title')).toBe('Die Hard');
                 });
                 
