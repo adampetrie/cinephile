@@ -62,6 +62,10 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/scripts/templates/*.ejs'
                 ],
                 tasks: ['jst']
+            },
+            test: {
+                files: ['<%= yeoman.app %>/scripts/{,*/}*.js', 'test/spec/**/*.js'],
+                tasks: ['test']
             }
         },
         connect: {
@@ -132,11 +136,22 @@ module.exports = function (grunt) {
                 'test/spec/{,*/}*.js'
             ]
         },
-        mocha: {
-            all: {
+        jasmine: {
+            all:{
+                src : [
+                    '.tmp/scripts/templates.js',
+                    '<%= yeoman.app %>/scripts/main.js',
+                    '<%= yeoman.app %>/scripts/{,*/}*.js'
+                ],
                 options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
+                    keepRunner: true,
+                    specs : 'test/spec/**/*.js',
+                    vendor : [
+                        '<%= yeoman.app %>/bower_components/jquery/jquery.js',
+                        '<%= yeoman.app %>/bower_components/underscore/underscore.js',
+                        '<%= yeoman.app %>/bower_components/backbone/backbone.js',
+                        '<%= yeoman.app %>/bower_components/backbone.localStorage/backbone.localStorage.js'
+                    ]
                 }
             }
         },
@@ -184,8 +199,10 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    '<%= yeoman.dist %>/scripts/main.js': [
+                    '<%= yeoman.dist %>/scripts/main.js':
+                    [
                         '.tmp/scripts/{,*/}*.js',
+                        '<%= yeoman.app %>/scripts/main.js',
                         '<%= yeoman.app %>/scripts/{,*/}*.js'
                     ]
                 }
@@ -323,8 +340,8 @@ module.exports = function (grunt) {
         'createDefaultTemplate',
         'jst',
         'compass',
-        'connect:test',
-        'mocha'
+        'jasmine',
+        'watch:test'
     ]);
 
     grunt.registerTask('build', [
@@ -346,7 +363,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'jshint',
-        //'test',
+        'test',
         'build'
     ]);
 };
