@@ -13,7 +13,7 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
     
     initialize: function()
     {
-        new cinephile.Views.HeaderView();
+        new cinephile.Views.SearchView();
         
         this.on('route', function(route)
         {

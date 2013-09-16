@@ -1,12 +1,10 @@
 'use strict';
 
-/*global cinephile, Backbone, JST, _*/
+/*global cinephile, Backbone, _*/
 
 cinephile.Views.SearchView = Backbone.View.extend({
     
-    el: '#search',
-    
-    template: JST['app/scripts/templates/SearchView.ejs'],
+    el: '#search-results',
     
     events:
     {
@@ -21,15 +19,6 @@ cinephile.Views.SearchView = Backbone.View.extend({
         this.collection = new Backbone.Collection();
         
         this.listenTo(this.collection, 'reset', this.showSearchResults);
-        
-        this.render();
-    },
-    
-    render: function()
-    {
-        this.$el.html(this.template());
-        
-        return this;
     },
     
     movieSearch: function(event)
@@ -43,7 +32,7 @@ cinephile.Views.SearchView = Backbone.View.extend({
         //again.
         if(this.lastQuery === query)
         {
-            this.$('.dropdown').addClass('open');
+            this.$el.addClass('open');
         }
         else
         {
@@ -89,7 +78,7 @@ cinephile.Views.SearchView = Backbone.View.extend({
             instance.$('.dropdown-menu').append(view.el);
         });
         
-        this.$('.dropdown').addClass('open');
+        this.$el.addClass('open');
     },
     
     clearSearchResults: function()
@@ -101,6 +90,6 @@ cinephile.Views.SearchView = Backbone.View.extend({
     {
         var template = _.template($('#no-results').html(), { query : this.lastQuery } );
         this.$('.dropdown-menu').html(template);
-        this.$('.dropdown').addClass('open');
+        this.$el.addClass('open');
     }
 });
