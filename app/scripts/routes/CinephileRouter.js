@@ -24,25 +24,31 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
     
     home: function()
     {
-        console.log('Home Route');
-        
         //Because homeView is static, there's no need to re-initialize it 
         if ( ! this.homeView)
         {
             this.homeView = new cinephile.Views.HomeView();
         }
         $('#content').html(this.homeView.el);
-        
     },
     
     favourites: function()
     {
-        console.log('Favourites Route');
+        //Again, dont re-initialize the favourites view as there is no need.
+        //Instead, just render the favourite movies
+        if ( ! this.favMoviesView)
+        {
+            this.favMoviesView = new cinephile.Views.FavouriteMoviesView({
+                collection: cinephile.favouriteMovies
+            });
+        }
+        else
+        {
+            console.log(this.favMoviesView);
+            this.favMoviesView.renderFavourites();
+        }
         
-        var favMoviesView = new cinephile.Views.FavouriteMoviesView({
-            collection: cinephile.favouriteMovies
-        });
-        $('#content').html(favMoviesView.el);
+        $('#content').html(this.favMoviesView.el);
     },
 
     details: function(id)

@@ -53,7 +53,7 @@ cinephile.Views.SearchView = Backbone.View.extend({
                     {
                         instance.collection.reset(data.results);
                     }
-                    //Otheriwse show a 'no results' message
+                    //Otherwise show a 'no results' message
                     else
                     {
                         instance.noResultsFound();

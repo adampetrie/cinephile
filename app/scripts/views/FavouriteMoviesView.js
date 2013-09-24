@@ -13,7 +13,6 @@ cinephile.Views.FavouriteMoviesView = Backbone.View.extend({
 
     initialize: function()
     {
-        this.collection.fetch();
         this.listenTo(this.collection, 'add', this.addMovie);
         
         //Stores 'watched', 'unwatched' values for filtering favourites list

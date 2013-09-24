@@ -150,7 +150,9 @@ module.exports = function (grunt) {
                         '<%= yeoman.app %>/bower_components/jquery/jquery.js',
                         '<%= yeoman.app %>/bower_components/underscore/underscore.js',
                         '<%= yeoman.app %>/bower_components/backbone/backbone.js',
-                        '<%= yeoman.app %>/bower_components/backbone.localStorage/backbone.localStorage.js'
+                        '<%= yeoman.app %>/bower_components/backbone.localStorage/backbone.localStorage.js',
+                        'test/bower_components/jasmine-sinon/lib/sinon-1.0.0/*.js',
+                        'test/bower_components/jasmine-sinon/lib/jasmine-sinon.js'
                     ]
                 }
             }

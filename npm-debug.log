@@ -1,0 +1,408 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-bower-requirejs' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.17
+4 warn package.json cinephile@0.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'grunt-bower-requirejs', null ]
+7 verbose cache add name=undefined spec="grunt-bower-requirejs" args=["grunt-bower-requirejs",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'grunt-bower-requirejs',
+8 verbose parsed url   path: 'grunt-bower-requirejs',
+8 verbose parsed url   href: 'grunt-bower-requirejs' }
+9 silly lockFile c73ba69c-grunt-bower-requirejs grunt-bower-requirejs
+10 verbose lock grunt-bower-requirejs /Users/adam/.npm/c73ba69c-grunt-bower-requirejs.lock
+11 silly lockFile c73ba69c-grunt-bower-requirejs grunt-bower-requirejs
+12 silly lockFile c73ba69c-grunt-bower-requirejs grunt-bower-requirejs
+13 verbose addNamed [ 'grunt-bower-requirejs', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 242d82c8-grunt-bower-requirejs grunt-bower-requirejs@
+16 verbose lock grunt-bower-requirejs@ /Users/adam/.npm/242d82c8-grunt-bower-requirejs.lock
+17 silly addNameRange { name: 'grunt-bower-requirejs', range: '*', hasData: false }
+18 verbose url raw grunt-bower-requirejs
+19 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-bower-requirejs' ]
+20 verbose url resolved https://registry.npmjs.org/grunt-bower-requirejs
+21 info trying registry request attempt 1 at 20:46:47
+22 verbose etag "B0EVLQKE21ED3IIPP7UB36WD6"
+23 http GET https://registry.npmjs.org/grunt-bower-requirejs
+24 http 304 https://registry.npmjs.org/grunt-bower-requirejs
+25 silly registry.get cb [ 304,
+25 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+25 silly registry.get     etag: '"B0EVLQKE21ED3IIPP7UB36WD6"',
+25 silly registry.get     date: 'Fri, 20 Sep 2013 00:46:48 GMT',
+25 silly registry.get     'content-length': '0' } ]
+26 verbose etag grunt-bower-requirejs from cache
+27 silly addNameRange number 2 { name: 'grunt-bower-requirejs', range: '*', hasData: true }
+28 silly addNameRange versions [ 'grunt-bower-requirejs',
+28 silly addNameRange   [ '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.4.3',
+28 silly addNameRange     '0.4.4',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1' ] ]
+29 verbose addNamed [ 'grunt-bower-requirejs', '0.7.1' ]
+30 verbose addNamed [ '0.7.1', '0.7.1' ]
+31 silly lockFile 018d0c0e-grunt-bower-requirejs-0-7-1 grunt-bower-requirejs@0.7.1
+32 verbose lock grunt-bower-requirejs@0.7.1 /Users/adam/.npm/018d0c0e-grunt-bower-requirejs-0-7-1.lock
+33 silly lockFile 018d0c0e-grunt-bower-requirejs-0-7-1 grunt-bower-requirejs@0.7.1
+34 silly lockFile 018d0c0e-grunt-bower-requirejs-0-7-1 grunt-bower-requirejs@0.7.1
+35 silly lockFile 242d82c8-grunt-bower-requirejs grunt-bower-requirejs@
+36 silly lockFile 242d82c8-grunt-bower-requirejs grunt-bower-requirejs@
+37 silly resolved [ { name: 'grunt-bower-requirejs',
+37 silly resolved     version: '0.7.1',
+37 silly resolved     description: 'Automagically wire-up installed Bower components into your RequireJS config',
+37 silly resolved     keywords:
+37 silly resolved      [ 'gruntplugin',
+37 silly resolved        'bower',
+37 silly resolved        'requirejs',
+37 silly resolved        'rjs',
+37 silly resolved        'config',
+37 silly resolved        'wire',
+37 silly resolved        'install',
+37 silly resolved        'component',
+37 silly resolved        'package',
+37 silly resolved        'module' ],
+37 silly resolved     homepage: 'https://github.com/yeoman/grunt-bower-requirejs',
+37 silly resolved     bugs: { url: 'https://github.com/yeoman/grunt-bower-requirejs/issues' },
+37 silly resolved     license: 'BSD',
+37 silly resolved     author:
+37 silly resolved      { name: 'Sindre Sorhus',
+37 silly resolved        email: 'sindresorhus@gmail.com',
+37 silly resolved        url: 'http://sindresorhus.com' },
+37 silly resolved     maintainers: [ [Object] ],
+37 silly resolved     contributors: [ [Object] ],
+37 silly resolved     main: 'Gruntfile.js',
+37 silly resolved     repository:
+37 silly resolved      { type: 'git',
+37 silly resolved        url: 'git://github.com/yeoman/grunt-bower-requirejs.git' },
+37 silly resolved     scripts: { test: 'grunt test' },
+37 silly resolved     dependencies: { requirejs: '~2.1.5', slash: '~0.1.0' },
+37 silly resolved     devDependencies:
+37 silly resolved      { matchdep: '~0.1.1',
+37 silly resolved        grunt: '~0.4.0',
+37 silly resolved        'grunt-contrib-jshint': '~0.6.2',
+37 silly resolved        'grunt-contrib-clean': '~0.5.0',
+37 silly resolved        'grunt-contrib-copy': '~0.4.0',
+37 silly resolved        'grunt-contrib-nodeunit': '~0.2.0',
+37 silly resolved        bower: '~1.x',
+37 silly resolved        'durable-json-lint': '0.0.1' },
+37 silly resolved     peerDependencies: { grunt: '~0.4.0', bower: '~1.x' },
+37 silly resolved     engines: { node: '>=0.8.0' },
+37 silly resolved     files: [ 'tasks/bower-requirejs.js' ],
+37 silly resolved     readme: '# grunt-bower-requirejs [![Build Status](https://secure.travis-ci.org/yeoman/grunt-bower-requirejs.png?branch=master)](http://travis-ci.org/yeoman/grunt-bower-requirejs)\n\nAutomagically wire-up installed Bower components into your RequireJS config\n\n\n## Getting Started\n\nIf you haven\'t used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you\'re familiar with that process, install this plugin with this command:\n\n```shell\nnpm install grunt-bower-requirejs --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks(\'grunt-bower-requirejs\');\n```\n\n[grunt]: http://gruntjs.com\n[Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md\n\n\n## Example usage\n\n```js\ngrunt.initConfig({\n\tbower: {\n\t\ttarget: {\n\t\t\trjsConfig: \'app/config.js\'\n\t\t}\n\t}\n});\n\ngrunt.loadNpmTasks(\'grunt-bower-requirejs\');\n\ngrunt.registerTask(\'default\', [\'bower\']);\n```\n\n\n## Documentation\n\nWhen the `bower` task is run it merges the paths of installed Bower components into the `paths` property of your RequireJS config.\n\nYou trigger this task from another task in your Gruntfile or through the CLI: `grunt bower`\n\n\n### rjsConfig\n\n**Required**  \nType: `String`\n\nSpecify a relative path to your RequireJS config.\n\nMake sure to specify the `baseUrl` property in your RequireJS config if you want to use relative paths.\n\n\n### Options\n\n#### exclude\n\nDefault: `[]`  \nType: `Array`\n\nSpecify components to be excluded from being added to the RequireJS config.\n\n#### baseUrl\n\nDefault: `null`  \nType: `String`\n\nGenerate paths relative to a specific directory. This option is for anyone **not** using `data-main` who wishes to set their own base.\n\n\n## Things to remember\n\n### Config file\n\nYou need to already have a config.js file at the location specified by `rjsConfig`. At a minimum, the file should look like this:\n\n``` js\nrequirejs.config({\n\tbaseUrl: \'./\',\n\tpaths: {}\n});\n```\n\nYou still need to create a path for *your* js files. The grunt task will only create paths for third party libraries specified in `bower.json`.\n\n``` js\nrequirejs.config({\n\tbaseUrl: \'./\',\n\tpaths: {\n\t\tmyComponent: \'js/myComponent.js\'\n\t}\n});\n```\n\nThe task does not overwrite the config file, it just adds additional paths to it. So paths you add will be preserved. Keep in mind that if you change or remove one of your bower dependencies after you\'ve run the task, that path will still exist in the config file and you\'ll need to manually remove it.\n\n### RequireJS component\n\nAlthough RequireJS does not provide a `bower.json` file, a path to `require.js` will still be created in your `rjsConfig` file. The path\'s name will be `requirejs`. If you are optimizing your scripts with `r.js` you can use this path to make sure RequireJS is included in your bundle.\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php) and copyright Google\n',
+37 silly resolved     readmeFilename: 'readme.md',
+37 silly resolved     _id: 'grunt-bower-requirejs@0.7.1',
+37 silly resolved     _from: 'grunt-bower-requirejs@' } ]
+38 info install grunt-bower-requirejs@0.7.1 into /Users/adam/Sites/cinephile
+39 info installOne grunt-bower-requirejs@0.7.1
+40 info /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs unbuild
+41 verbose tar unpack /Users/adam/.npm/grunt-bower-requirejs/0.7.1/package.tgz
+42 silly lockFile 4e1aca70-de-modules-grunt-bower-requirejs tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs
+43 verbose lock tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs /Users/adam/.npm/4e1aca70-de-modules-grunt-bower-requirejs.lock
+44 silly lockFile 47c2f118-ower-requirejs-0-7-1-package-tgz tar:///Users/adam/.npm/grunt-bower-requirejs/0.7.1/package.tgz
+45 verbose lock tar:///Users/adam/.npm/grunt-bower-requirejs/0.7.1/package.tgz /Users/adam/.npm/47c2f118-ower-requirejs-0-7-1-package-tgz.lock
+46 silly gunzTarPerm modes [ '755', '644' ]
+47 silly gunzTarPerm extractEntry package.json
+48 silly gunzTarPerm extractEntry readme.md
+49 silly gunzTarPerm extractEntry tasks/bower-requirejs.js
+50 silly lockFile 4e1aca70-de-modules-grunt-bower-requirejs tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs
+51 silly lockFile 4e1aca70-de-modules-grunt-bower-requirejs tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs
+52 silly lockFile 47c2f118-ower-requirejs-0-7-1-package-tgz tar:///Users/adam/.npm/grunt-bower-requirejs/0.7.1/package.tgz
+53 silly lockFile 47c2f118-ower-requirejs-0-7-1-package-tgz tar:///Users/adam/.npm/grunt-bower-requirejs/0.7.1/package.tgz
+54 info preinstall grunt-bower-requirejs@0.7.1
+55 verbose readDependencies using package.json deps
+56 verbose readDependencies using package.json deps
+57 verbose cache add [ 'requirejs@~2.1.5', null ]
+58 verbose cache add name=undefined spec="requirejs@~2.1.5" args=["requirejs@~2.1.5",null]
+59 verbose parsed url { protocol: null,
+59 verbose parsed url   slashes: null,
+59 verbose parsed url   auth: null,
+59 verbose parsed url   host: null,
+59 verbose parsed url   port: null,
+59 verbose parsed url   hostname: null,
+59 verbose parsed url   hash: null,
+59 verbose parsed url   search: null,
+59 verbose parsed url   query: null,
+59 verbose parsed url   pathname: 'requirejs@~2.1.5',
+59 verbose parsed url   path: 'requirejs@~2.1.5',
+59 verbose parsed url   href: 'requirejs@~2.1.5' }
+60 verbose cache add name="requirejs" spec="~2.1.5" args=["requirejs","~2.1.5"]
+61 verbose parsed url { protocol: null,
+61 verbose parsed url   slashes: null,
+61 verbose parsed url   auth: null,
+61 verbose parsed url   host: null,
+61 verbose parsed url   port: null,
+61 verbose parsed url   hostname: null,
+61 verbose parsed url   hash: null,
+61 verbose parsed url   search: null,
+61 verbose parsed url   query: null,
+61 verbose parsed url   pathname: '~2.1.5',
+61 verbose parsed url   path: '~2.1.5',
+61 verbose parsed url   href: '~2.1.5' }
+62 verbose addNamed [ 'requirejs', '~2.1.5' ]
+63 verbose addNamed [ null, '>=2.1.5-0 <2.2.0-0' ]
+64 silly lockFile ec421fa2-requirejs-2-1-5 requirejs@~2.1.5
+65 verbose lock requirejs@~2.1.5 /Users/adam/.npm/ec421fa2-requirejs-2-1-5.lock
+66 verbose cache add [ 'slash@~0.1.0', null ]
+67 verbose cache add name=undefined spec="slash@~0.1.0" args=["slash@~0.1.0",null]
+68 verbose parsed url { protocol: null,
+68 verbose parsed url   slashes: null,
+68 verbose parsed url   auth: null,
+68 verbose parsed url   host: null,
+68 verbose parsed url   port: null,
+68 verbose parsed url   hostname: null,
+68 verbose parsed url   hash: null,
+68 verbose parsed url   search: null,
+68 verbose parsed url   query: null,
+68 verbose parsed url   pathname: 'slash@~0.1.0',
+68 verbose parsed url   path: 'slash@~0.1.0',
+68 verbose parsed url   href: 'slash@~0.1.0' }
+69 verbose cache add name="slash" spec="~0.1.0" args=["slash","~0.1.0"]
+70 verbose parsed url { protocol: null,
+70 verbose parsed url   slashes: null,
+70 verbose parsed url   auth: null,
+70 verbose parsed url   host: null,
+70 verbose parsed url   port: null,
+70 verbose parsed url   hostname: null,
+70 verbose parsed url   hash: null,
+70 verbose parsed url   search: null,
+70 verbose parsed url   query: null,
+70 verbose parsed url   pathname: '~0.1.0',
+70 verbose parsed url   path: '~0.1.0',
+70 verbose parsed url   href: '~0.1.0' }
+71 verbose addNamed [ 'slash', '~0.1.0' ]
+72 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+73 silly lockFile 96f3c47c-slash-0-1-0 slash@~0.1.0
+74 verbose lock slash@~0.1.0 /Users/adam/.npm/96f3c47c-slash-0-1-0.lock
+75 silly addNameRange { name: 'requirejs',
+75 silly addNameRange   range: '>=2.1.5-0 <2.2.0-0',
+75 silly addNameRange   hasData: false }
+76 silly addNameRange { name: 'slash', range: '>=0.1.0-0 <0.2.0-0', hasData: false }
+77 verbose url raw requirejs
+78 verbose url resolving [ 'https://registry.npmjs.org/', './requirejs' ]
+79 verbose url resolved https://registry.npmjs.org/requirejs
+80 info trying registry request attempt 1 at 20:46:48
+81 verbose etag "EZPPV11V656YHVO13K74ITOXU"
+82 http GET https://registry.npmjs.org/requirejs
+83 verbose url raw slash
+84 verbose url resolving [ 'https://registry.npmjs.org/', './slash' ]
+85 verbose url resolved https://registry.npmjs.org/slash
+86 info trying registry request attempt 1 at 20:46:48
+87 verbose etag "9S9TXLTVI7J2TC06H2Z60D5IE"
+88 http GET https://registry.npmjs.org/slash
+89 http 304 https://registry.npmjs.org/requirejs
+90 silly registry.get cb [ 304,
+90 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+90 silly registry.get     etag: '"EZPPV11V656YHVO13K74ITOXU"',
+90 silly registry.get     date: 'Fri, 20 Sep 2013 00:46:49 GMT',
+90 silly registry.get     'content-length': '0' } ]
+91 verbose etag requirejs from cache
+92 silly addNameRange number 2 { name: 'requirejs', range: '>=2.1.5-0 <2.2.0-0', hasData: true }
+93 silly addNameRange versions [ 'requirejs',
+93 silly addNameRange   [ '0.26.0',
+93 silly addNameRange     '0.27.0',
+93 silly addNameRange     '0.27.1',
+93 silly addNameRange     '1.0.0',
+93 silly addNameRange     '1.0.1',
+93 silly addNameRange     '1.0.2',
+93 silly addNameRange     '1.0.3',
+93 silly addNameRange     '1.0.4',
+93 silly addNameRange     '1.0.5',
+93 silly addNameRange     '1.0.6',
+93 silly addNameRange     '1.0.7',
+93 silly addNameRange     '1.0.8',
+93 silly addNameRange     '2.0.0',
+93 silly addNameRange     '2.0.1',
+93 silly addNameRange     '2.0.2',
+93 silly addNameRange     '2.0.3',
+93 silly addNameRange     '2.0.4',
+93 silly addNameRange     '2.0.5',
+93 silly addNameRange     '2.0.6',
+93 silly addNameRange     '2.1.0',
+93 silly addNameRange     '2.1.1',
+93 silly addNameRange     '2.1.2',
+93 silly addNameRange     '2.1.3',
+93 silly addNameRange     '2.1.4',
+93 silly addNameRange     '2.1.5',
+93 silly addNameRange     '2.1.6',
+93 silly addNameRange     '2.1.7',
+93 silly addNameRange     '2.1.8' ] ]
+94 verbose addNamed [ 'requirejs', '2.1.8' ]
+95 verbose addNamed [ '2.1.8', '2.1.8' ]
+96 silly lockFile f58478c4-requirejs-2-1-8 requirejs@2.1.8
+97 verbose lock requirejs@2.1.8 /Users/adam/.npm/f58478c4-requirejs-2-1-8.lock
+98 silly lockFile f58478c4-requirejs-2-1-8 requirejs@2.1.8
+99 silly lockFile f58478c4-requirejs-2-1-8 requirejs@2.1.8
+100 silly lockFile ec421fa2-requirejs-2-1-5 requirejs@~2.1.5
+101 silly lockFile ec421fa2-requirejs-2-1-5 requirejs@~2.1.5
+102 http 200 https://registry.npmjs.org/slash
+103 silly registry.get cb [ 200,
+103 silly registry.get   { vary: 'Accept',
+103 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+103 silly registry.get     etag: '"FJB48SIZ5DMA4X0Y2SJ9AS51"',
+103 silly registry.get     date: 'Fri, 20 Sep 2013 00:46:49 GMT',
+103 silly registry.get     'content-type': 'application/json',
+103 silly registry.get     'content-length': '3440' } ]
+104 silly addNameRange number 2 { name: 'slash', range: '>=0.1.0-0 <0.2.0-0', hasData: true }
+105 silly addNameRange versions [ 'slash', [ '0.1.0' ] ]
+106 verbose addNamed [ 'slash', '0.1.0' ]
+107 verbose addNamed [ '0.1.0', '0.1.0' ]
+108 silly lockFile b5cb5fe2-slash-0-1-0 slash@0.1.0
+109 verbose lock slash@0.1.0 /Users/adam/.npm/b5cb5fe2-slash-0-1-0.lock
+110 silly lockFile b5cb5fe2-slash-0-1-0 slash@0.1.0
+111 silly lockFile b5cb5fe2-slash-0-1-0 slash@0.1.0
+112 silly lockFile 96f3c47c-slash-0-1-0 slash@~0.1.0
+113 silly lockFile 96f3c47c-slash-0-1-0 slash@~0.1.0
+114 silly resolved [ { name: 'requirejs',
+114 silly resolved     description: 'Node adapter for RequireJS, for loading AMD modules. Includes RequireJS optimizer',
+114 silly resolved     version: '2.1.8',
+114 silly resolved     homepage: 'http://github.com/jrburke/r.js',
+114 silly resolved     author:
+114 silly resolved      { name: 'James Burke',
+114 silly resolved        email: 'jrburke@gmail.com',
+114 silly resolved        url: 'http://github.com/jrburke' },
+114 silly resolved     licenses: [ [Object], [Object] ],
+114 silly resolved     repository: { type: 'git', url: 'https://github.com/jrburke/r.js.git' },
+114 silly resolved     main: './bin/r.js',
+114 silly resolved     bin: { 'r.js': './bin/r.js' },
+114 silly resolved     engines: { node: '>=0.4.0' },
+114 silly resolved     readme: '# requirejs\n\nRequireJS for use in Node. includes:\n\n* r.js: the RequireJS optimizer, and AMD runtime for use in Node.\n* require.js: The browser-based AMD loader.\n\nMore information at http://requirejs.org\n\n',
+114 silly resolved     readmeFilename: 'README.md',
+114 silly resolved     bugs: { url: 'https://github.com/jrburke/r.js/issues' },
+114 silly resolved     _id: 'requirejs@2.1.8',
+114 silly resolved     _from: 'requirejs@~2.1.5' },
+114 silly resolved   { name: 'slash',
+114 silly resolved     version: '0.1.0',
+114 silly resolved     description: 'Convert Windows backslash paths to slash paths',
+114 silly resolved     keywords:
+114 silly resolved      [ 'path',
+114 silly resolved        'seperator',
+114 silly resolved        'sep',
+114 silly resolved        'slash',
+114 silly resolved        'backslash',
+114 silly resolved        'windows',
+114 silly resolved        'win' ],
+114 silly resolved     homepage: 'https://github.com/sindresorhus/slash',
+114 silly resolved     bugs: { url: 'https://github.com/sindresorhus/slash/issues' },
+114 silly resolved     author:
+114 silly resolved      { name: 'Sindre Sorhus',
+114 silly resolved        email: 'sindresorhus@gmail.com',
+114 silly resolved        url: 'http://sindresorhus.com' },
+114 silly resolved     main: 'slash.js',
+114 silly resolved     repository: { type: 'git', url: 'git://github.com/sindresorhus/slash.git' },
+114 silly resolved     scripts: { test: 'mocha' },
+114 silly resolved     devDependencies: { mocha: '~1.11.0' },
+114 silly resolved     engines: { node: '>=0.8.0' },
+114 silly resolved     licenses: [ [Object] ],
+114 silly resolved     files: [ 'slash.js' ],
+114 silly resolved     readme: '# slash [![Build Status](https://secure.travis-ci.org/sindresorhus/slash.png?branch=master)](http://travis-ci.org/sindresorhus/slash)\n\nConvert Windows backslash paths to slash paths.\n\n[Forward-slash paths can be used in Windows](http://superuser.com/a/176395/6877) as long as it\'s not an extended-length path and it doesn\'t contain Unicode.\n\n\n## Install\n\nInstall with [npm](https://npmjs.org): `npm install --save slash`\n\n\n## Example\n\n```js\nvar path = require(\'path\');\nvar slash = require(\'slash\');\n\nvar str = path.join(\'foo\', \'bar\');\nconsole.log(str);\n//=> foo\\\\bar\n\nif (process.platform === \'win32\') {\n\tstr = slash(str);\n\tconsole.log(str);\n\t//=> foo/bar\n}\n```\n\n\n## API\n\n### slash(path)\n\nType: `String`\n\nAccepts a Windows backslash path and returns a slash path.\n\n\n## License\n\nMIT License • © [Sindre Sorhus](http://sindresorhus.com)\n',
+114 silly resolved     readmeFilename: 'readme.md',
+114 silly resolved     _id: 'slash@0.1.0',
+114 silly resolved     _from: 'slash@~0.1.0' } ]
+115 info install requirejs@2.1.8 into /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs
+116 info install slash@0.1.0 into /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs
+117 info installOne requirejs@2.1.8
+118 info installOne slash@0.1.0
+119 info /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/requirejs unbuild
+120 info /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/slash unbuild
+121 verbose tar unpack /Users/adam/.npm/requirejs/2.1.8/package.tgz
+122 silly lockFile fd4c0a5d-requirejs-node-modules-requirejs tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/requirejs
+123 verbose lock tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/requirejs /Users/adam/.npm/fd4c0a5d-requirejs-node-modules-requirejs.lock
+124 silly lockFile 5089b1e6--npm-requirejs-2-1-8-package-tgz tar:///Users/adam/.npm/requirejs/2.1.8/package.tgz
+125 verbose lock tar:///Users/adam/.npm/requirejs/2.1.8/package.tgz /Users/adam/.npm/5089b1e6--npm-requirejs-2-1-8-package-tgz.lock
+126 verbose tar unpack /Users/adam/.npm/slash/0.1.0/package.tgz
+127 silly lockFile 9c8c2321-wer-requirejs-node-modules-slash tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/slash
+128 verbose lock tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/slash /Users/adam/.npm/9c8c2321-wer-requirejs-node-modules-slash.lock
+129 silly lockFile 4bd4f789-adam-npm-slash-0-1-0-package-tgz tar:///Users/adam/.npm/slash/0.1.0/package.tgz
+130 verbose lock tar:///Users/adam/.npm/slash/0.1.0/package.tgz /Users/adam/.npm/4bd4f789-adam-npm-slash-0-1-0-package-tgz.lock
+131 silly gunzTarPerm modes [ '755', '644' ]
+132 silly gunzTarPerm modes [ '755', '644' ]
+133 silly gunzTarPerm extractEntry package.json
+134 silly gunzTarPerm extractEntry package.json
+135 silly gunzTarPerm extractEntry README.md
+136 silly gunzTarPerm extractEntry require.js
+137 silly gunzTarPerm extractEntry slash.js
+138 silly gunzTarPerm extractEntry readme.md
+139 silly gunzTarPerm extractEntry bin/r.js
+140 silly lockFile 9c8c2321-wer-requirejs-node-modules-slash tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/slash
+141 silly lockFile 9c8c2321-wer-requirejs-node-modules-slash tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/slash
+142 silly lockFile 4bd4f789-adam-npm-slash-0-1-0-package-tgz tar:///Users/adam/.npm/slash/0.1.0/package.tgz
+143 silly lockFile 4bd4f789-adam-npm-slash-0-1-0-package-tgz tar:///Users/adam/.npm/slash/0.1.0/package.tgz
+144 info preinstall slash@0.1.0
+145 verbose readDependencies using package.json deps
+146 verbose readDependencies using package.json deps
+147 silly resolved []
+148 verbose about to build /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/slash
+149 info build /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/slash
+150 verbose linkStuff [ false,
+150 verbose linkStuff   false,
+150 verbose linkStuff   false,
+150 verbose linkStuff   '/Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules' ]
+151 info linkStuff slash@0.1.0
+152 verbose linkBins slash@0.1.0
+153 verbose linkMans slash@0.1.0
+154 verbose rebuildBundles slash@0.1.0
+155 info install slash@0.1.0
+156 info postinstall slash@0.1.0
+157 silly lockFile fd4c0a5d-requirejs-node-modules-requirejs tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/requirejs
+158 silly lockFile fd4c0a5d-requirejs-node-modules-requirejs tar:///Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/requirejs
+159 silly lockFile 5089b1e6--npm-requirejs-2-1-8-package-tgz tar:///Users/adam/.npm/requirejs/2.1.8/package.tgz
+160 silly lockFile 5089b1e6--npm-requirejs-2-1-8-package-tgz tar:///Users/adam/.npm/requirejs/2.1.8/package.tgz
+161 info preinstall requirejs@2.1.8
+162 verbose readDependencies using package.json deps
+163 verbose readDependencies using package.json deps
+164 silly resolved []
+165 verbose about to build /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/requirejs
+166 info build /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/requirejs
+167 verbose linkStuff [ false,
+167 verbose linkStuff   false,
+167 verbose linkStuff   false,
+167 verbose linkStuff   '/Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules' ]
+168 info linkStuff requirejs@2.1.8
+169 verbose linkBins requirejs@2.1.8
+170 verbose link bins [ { 'r.js': './bin/r.js' },
+170 verbose link bins   '/Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs/node_modules/.bin',
+170 verbose link bins   false ]
+171 verbose linkMans requirejs@2.1.8
+172 verbose rebuildBundles requirejs@2.1.8
+173 info install requirejs@2.1.8
+174 info postinstall requirejs@2.1.8
+175 verbose about to build /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs
+176 info build /Users/adam/Sites/cinephile/node_modules/grunt-bower-requirejs
+177 verbose linkStuff [ false,
+177 verbose linkStuff   false,
+177 verbose linkStuff   false,
+177 verbose linkStuff   '/Users/adam/Sites/cinephile/node_modules' ]
+178 info linkStuff grunt-bower-requirejs@0.7.1
+179 verbose linkBins grunt-bower-requirejs@0.7.1
+180 verbose linkMans grunt-bower-requirejs@0.7.1
+181 verbose rebuildBundles grunt-bower-requirejs@0.7.1
+182 verbose rebuildBundles [ '.bin', 'requirejs', 'slash' ]
+183 info install grunt-bower-requirejs@0.7.1
+184 info postinstall grunt-bower-requirejs@0.7.1
+185 verbose readDependencies using package.json deps
+186 verbose already installed skipping bower@~1.x /Users/adam/Sites/cinephile
+187 silly resolved []
+188 error peerinvalid The package bower does not satisfy its siblings' peerDependencies requirements!
+188 error peerinvalid Peer grunt-bower-requirejs@0.7.1 wants bower@~1.x
+189 error System Darwin 12.4.0
+190 error command "node" "/usr/local/bin/npm" "install" "grunt-bower-requirejs"
+191 error cwd /Users/adam/Sites/cinephile
+192 error node -v v0.10.17
+193 error npm -v 1.3.8
+194 error code EPEERINVALID
+195 verbose exit [ 1, true ]
