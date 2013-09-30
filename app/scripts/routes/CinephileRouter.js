@@ -44,7 +44,6 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
         }
         else
         {
-            console.log(this.favMoviesView);
             this.favMoviesView.renderFavourites();
         }
         
@@ -53,8 +52,6 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
 
     details: function(id)
     {
-        console.log('Details Route');
-        
         var movieInCollection = cinephile.favouriteMovies.get(id);
         
         //If the selected ID is in the favourites collection, we already have all the data
