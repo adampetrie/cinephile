@@ -21,19 +21,14 @@
             catch(e) {}
             
             this.router.navigate('elsewhere');
-            
-            this.homeViewStub = sinon.stub(cinephile.Views, 'HomeView')
-                .returns(new Backbone.View());
-            this.favouritesViewStub = sinon.stub(cinephile.Views, 'FavouriteMoviesView')
-                .returns(new Backbone.View());
-        });
-        
-        afterEach(function () {
-            this.homeViewStub.restore();
-            this.favouritesViewStub.restore();
         });
         
         describe('Home Route', function() {
+            
+            beforeEach(function () {
+                this.homeViewStub = sinon.stub(cinephile.Views, 'HomeView')
+                    .returns(new Backbone.View());
+            });
             
             it('should load the homepage on a blank route', function () {
                 
@@ -54,9 +49,22 @@
                 this.router.home();
                 expect(this.homeViewStub.calledTwice).toBeFalsy();
             });
+            
+            afterEach(function () {
+                this.homeViewStub.restore();
+            });
         });
         
         describe('Favourites Route', function() {
+            
+            beforeEach(function () {
+                //Stubbed view for favourites 
+                var StubView = Backbone.View.extend({
+                    renderFavourites: sinon.stub()
+                });
+                this.favouritesViewStub = sinon.stub(cinephile.Views, 'FavouriteMoviesView')
+                    .returns(new StubView());
+            });
             
             it('should load the favourites on /favourites', function () {
                 
@@ -72,16 +80,29 @@
                 expect(this.favouritesViewStub).toHaveBeenCalledOnce();
             });
             
-            it('Reuses the favourites view if one does exist and reset it\'s collection', function () {
+            it('reuses the favourites view if one does exist and just re-renders the favourite movies', function () {
                 this.router.favourites();
                 this.router.favourites();
                 
                 expect(this.favouritesViewStub).toHaveBeenCalledOnce();
-                expect(this.favouritesViewStub.render).toHaveBeenCalledTwice();
+                expect(this.router.favMoviesView.renderFavourites).toHaveBeenCalledOnce();
+            });
+            
+            afterEach(function () {
+                this.favouritesViewStub.restore();
             });
         });
         
         describe('Details Route', function () {
+            
+            beforeEach(function () {
+                
+                var StubMovieCollection = Backbone.Collection.extend({
+                    get: sinon.stub()
+                });
+                
+                cinephile.favouriteMovies = new StubMovieCollection();
+            });
             
             it('should load the details page on /details/id passing a movie ID', function () {
                 
@@ -90,6 +111,12 @@
                 
                 expect(this.routeSpy).toHaveBeenCalledOnce();
                 expect(this.routeSpy).toHaveBeenCalledWith('562');
+            });
+            
+            it('should attempt to get the passed in movie ID from the favouriteMovies collection', function () {
+                this.router.details('562');
+                
+                expect(cinephile.favouriteMovies.get).toHaveBeenCalledWith('562');
             });
         });
     });

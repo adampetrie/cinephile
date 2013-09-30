@@ -1,4 +1,4 @@
-/*global cinephile, describe, it, expect, beforeEach, afterEach, sinon, dieHard */
+/*global cinephile, describe, it, expect, beforeEach, sinon, dieHard */
 'use strict';
 
 (function () {
@@ -13,10 +13,6 @@
             
             beforeEach(function () {
                 this.movieDetailsModel = new cinephile.Models.MovieDetailsModel({ id : 562 });
-            });
-            
-            afterEach(function () {
-                 
             });
             
             it('will populate itself with movie information from TMDb based on an ID', function () {
