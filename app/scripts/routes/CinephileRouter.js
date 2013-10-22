@@ -52,32 +52,39 @@ cinephile.Routers.CinephileRouter = Backbone.Router.extend({
 
     details: function(id)
     {
+        // Clean up the existing details view (if one exists)
+        if (this.detailsView)
+        {
+            this.detailsView.close();
+        }
+        
         var movieInCollection = cinephile.favouriteMovies.get(id);
         
         //If the selected ID is in the favourites collection, we already have all the data
         //we need to render its details properly.
         if(typeof movieInCollection !== 'undefined')
         {
-            var view = new cinephile.Views.MovieDetailsView({
+            this.detailsView = new cinephile.Views.MovieDetailsView({
                 model: movieInCollection,
                 inFavourites: true
             });
             
-            $('#content').html(view.el);
+            $('#content').html(this.detailsView.el);
         }
         //ID's not in favourites are requested from the server before being rendered
         else
         {
+            var instance = this;
             var movieDetails = new cinephile.Models.MovieDetailsModel({ id: id });
             movieDetails.fetch({
                 success: function(movie)
                 {
-                    var view = new cinephile.Views.MovieDetailsView({
+                    instance.detailsView = new cinephile.Views.MovieDetailsView({
                         model: movie,
                         inFavourites: false
                     });
                     
-                    $('#content').html(view.el);
+                    $('#content').html(instance.detailsView.el);
                 }
             });
         }

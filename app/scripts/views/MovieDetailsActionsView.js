@@ -46,5 +46,10 @@ cinephile.Views.MovieDetailsActionsView = Backbone.View.extend({
     toggleWatched: function()
     {
         this.model.toggleWatched();
+    },
+    
+    close: function()
+    {
+        this.remove();
     }
 });

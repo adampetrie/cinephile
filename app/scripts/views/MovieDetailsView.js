@@ -26,6 +26,12 @@ cinephile.Views.MovieDetailsView = Backbone.View.extend({
         return this;
     },
     
+    close: function()
+    {
+        this.actionsView.close();
+        this.remove();
+    },
+    
     getSimilarTitles: function()
     {
         var instance = this;
